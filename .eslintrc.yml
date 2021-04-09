@@ -1,0 +1,18 @@
+# https://eslint.org/docs/user-guide/configuring#specifying-environments
+env:
+  node: true
+  browser: true
+  es2021: true
+
+extends:
+  - 'airbnb-base'
+  - 'plugin:jest/recommended'
+  - 'plugin:you-dont-need-lodash-underscore/compatible'
+
+parserOptions:
+  ecmaVersion: 12
+  sourceType: module
+
+rules: # 0 - off, 1 - warning, 2 - error
+  no-console: 0 # Disabling rule - presence of "console" in the code
+  import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
